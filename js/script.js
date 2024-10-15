@@ -1514,6 +1514,12 @@
 							if (output.hasClass("snackbars")) {
 								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
 								output.addClass("active");
+								
+								// Ocultar el mensaje de "Sending" después de 3 segundos
+								setTimeout(function() {
+								output.removeClass("active");
+								}, 9000); // 3000 milisegundos = 3 segundos
+
 							}
 						} else {
 							return false;
