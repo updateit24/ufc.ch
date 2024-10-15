@@ -1518,7 +1518,13 @@
 								// Ocultar el mensaje de "Sending" después de 3 segundos
 								setTimeout(function() {
 								output.removeClass("active");
-								}, 9000); // 3000 milisegundos = 3 segundos
+								}, 3000); // 3000 milisegundos = 3 segundos
+								
+								// Limpiar los campos del formulario
+								var form = document.querySelector('.rd-mailform');
+								if (form) {
+								form.reset(); // Resetea todos los campos del formulario
+								}
 
 							}
 						} else {
