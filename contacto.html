@@ -177,30 +177,54 @@
                         <h2 class="text-spacing-25 text-transform-none">Formulario de Contacto</h2>
                         <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://formspree.io/f/mzzbbvlz">
                             <div class="row row-20 gutters-20">
-                                <div class="col-md-4">
-                                    <div class="form-wrap">
-                                        <input class="form-input" id="contact-your-name-5" type="text" name="name" data-constraints="@Required">
-                                        <label class="form-label" for="contact-your-name-5">Nombre*</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-wrap">
-                                        <input class="form-input" id="contact-email-5" type="email" name="email" data-constraints="@Email @Required">
-                                        <label class="form-label" for="contact-email-5">E-mail*</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-wrap">
-                                        <input class="form-input" id="contact-phone-5" type="text" name="phone" data-constraints="@Numeric">
-                                        <label class="form-label" for="contact-phone-5">Teléfono*</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-wrap">
-                                        <label class="form-label" for="contact-message-5">Mensaje</label>
-                                        <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
-                                    </div>
-                                </div>
+                                
+								
+										<div class="col-md-4">
+											<div class="form-wrap">
+												<input class="form-input" 
+													   id="contact-your-name-5" 
+													   type="text" 
+													   name="name" 
+													   autocomplete="name" 
+													   data-constraints="@Required">
+												<label class="form-label" for="contact-your-name-5">Nombre*</label>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-wrap">
+												<input class="form-input" 
+													   id="contact-email-5" 
+													   type="email" 
+													   name="email" 
+													   autocomplete="email" 
+													   data-constraints="@Email @Required">
+												<label class="form-label" for="contact-email-5">E-mail*</label>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-wrap">
+												<input class="form-input" 
+													   id="contact-phone-5" 
+													   type="tel" 
+													   name="phone" 
+													   autocomplete="tel" 
+													   data-constraints="@Numeric">
+												<label class="form-label" for="contact-phone-5">Teléfono*</label>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-wrap">
+												<label class="form-label" for="contact-message-5">Mensaje</label>
+												<textarea class="form-input textarea-lg" 
+														  id="contact-message-5" 
+														  name="message" 
+														  autocomplete="off" 
+														  data-constraints="@Required"></textarea>
+											</div>
+										</div>
+
+								
+								
                                 <div class="form-group agreement_checkbox check_box col-12">
                                     <label for="contact-sbcr-agreement" class="checkbox-inline">
                                         <p>
