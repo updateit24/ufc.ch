@@ -1,5 +1,8 @@
 "use strict";
-
+//Desactivación Temporal del Mensaje
+if (window.jQuery && jQuery.migrateMute !== undefined) {
+    jQuery.migrateMute = true;
+}
 (function () {
 	// Global variables
 	var userAgent = navigator.userAgent.toLowerCase(),
