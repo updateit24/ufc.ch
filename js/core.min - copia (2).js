@@ -247,6 +247,7 @@ var _typeof=typeof Symbol==='function'&&typeof Symbol.iterator==='symbol'?functi
 
 
 /*función loadContent que se encargará de cargar el contenido de la página
+*/
 
 function loadContent(url, n) {
     $.ajax({
@@ -268,33 +269,8 @@ function loadContent(url, n) {
         }
     });
 }
-*/
 
-function loadContent(url, n) {
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.text(); // Devuelve el texto de la respuesta
-        })
-        .then(data => {
-            n.page.html(data); // Actualiza el contenido de la página
-            n.page.removeClass(n.animOut).addClass(n.animIn); // Añade animación de entrada
 
-            // Manejo de la animación de entrada
-            setTimeout(function() {
-                n.page.removeClass(n.animIn); // Elimina clase de animación
-                n.onAnimated && n.onAnimated(n); // Callback si existe
-            }, n.animDuration);
-        })
-        .catch(error => {
-            console.error("Error al cargar la página:", error); // Manejo de errores
-            n.page.html("<p>Error al cargar el contenido.</p>"); // Mensaje de error
-        });
-}
-
-/*
 
 $("a").click(function(a) {
     var t = a.currentTarget.getAttribute("href");
@@ -308,19 +284,6 @@ $("a").click(function(a) {
     }
 });
 
-*/
-
-$("a").click(function(a) {
-    var t = a.currentTarget.getAttribute("href");
-    if (n.conditions(a, t)) {
-        a.preventDefault(); // Previene el comportamiento por defecto
-        console.warn("[page transition]");
-        loadContent(t, n); // Carga el contenido
-
-        // Actualiza la URL
-        history.pushState({ path: t }, '', t);
-    }
-});
 
 
 
@@ -378,7 +341,6 @@ window.onpopstate = function(event) {
         loadContent(window.location.href, { page: $("#page") });
     }
 };
-
 
 
 
