@@ -363,31 +363,6 @@
     <script src="https://updateit24.github.io/ufc.ch/js/core.min.js"></script>
     <script src="js/script.js"></script>
 	
-			
-			<script>
-		document.querySelector('form').addEventListener('submit', function(event) {
-			event.preventDefault();  // Prevenir el comportamiento por defecto
-
-			var formData = new FormData(this);
-
-			fetch('https://formspree.io/f/mzzbbvlz', {
-				method: 'POST',
-				body: formData,
-				mode: 'no-cors'  // Evita problemas de CORS
-			})
-			.then(function(response) {
-				console.log('Formulario enviado con éxito');
-				// Aquí puedes mostrar un mensaje de éxito al usuario
-				alert('Formulario enviado correctamente.');
-			})
-			.catch(function(error) {
-				console.error('Error al enviar el formulario:', error);
-				// Aquí puedes manejar los errores de la solicitud
-				alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
-			});
-		});
-		</script>
-
 	
 	
 </body>
