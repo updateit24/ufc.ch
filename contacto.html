@@ -175,6 +175,9 @@
                 <div class="row row-60 justify-content-center">
                     <div class="col-lg-8 col-12">
                         <h2 class="text-spacing-25 text-transform-none">Formulario de Contacto</h2>
+						
+						
+						
                         <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://formspree.io/f/mzzbbvlz">
                             <div class="row row-20 gutters-20">
                                 
@@ -238,6 +241,13 @@
                             </div>
                             <button class="button button-secondary button-winona" type="submit">Enviar</button>
                         </form>
+						
+								<script>
+								document.querySelector('form').addEventListener('submit', function() {
+									// No hacer nada adicional ni mostrar mensajes
+								});
+								</script>
+						
                     </div>
                     <div class="col-lg-4 col-12">
                         <div class="aside-contacts">
@@ -363,26 +373,6 @@
     <script src="https://updateit24.github.io/ufc.ch/js/core.min.js"></script>
     <script src="js/script.js"></script>
 	
-	<script>
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevenir el comportamiento por defecto de envío
-
-    var formData = new FormData(this);
-
-    fetch('https://formspree.io/f/mzzbbvlz', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'  // Evitar problemas de CORS
-    })
-    .then(function(response) {
-        // Eliminar cualquier mensaje y simplemente no hacer nada visible
-        console.log('Formulario enviado con éxito');
-    })
-    .catch(function(error) {
-        console.error('Error al enviar el formulario:', error);
-    });
-});
-</script>
 
 	
 </body>
