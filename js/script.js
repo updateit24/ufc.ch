@@ -4,26 +4,6 @@ if (window.jQuery && jQuery.migrateMute !== undefined) {
     jQuery.migrateMute = true;
 }*/
 
-<script>
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevenir el comportamiento por defecto de envío
-
-    var formData = new FormData(this);
-
-    fetch('https://formspree.io/f/mzzbbvlz', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'  // Evitar problemas de CORS
-    })
-    .then(function(response) {
-        // Eliminar cualquier mensaje y simplemente no hacer nada visible
-        console.log('Formulario enviado con éxito');
-    })
-    .catch(function(error) {
-        console.error('Error al enviar el formulario:', error);
-    });
-});
-</script>
 
 
 (function () {
